@@ -1,0 +1,68 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+
+	<title>Flipping Cards</title>
+</head>
+
+<body>
+
+	<div class="row">
+
+		<!--翻纸牌效果  -->
+		<div class="col-1-of-3">
+			<div class="card" onclick="fanzhuan(1)" id="card1">
+				<div class="card__side card__side--front">
+					<a href="#"><img src="img/fanmian.jpg"></a>
+				</div>
+				<div class="card__side card__side--back">
+					<a href="#"><img src="img/zhengmian.jpg"></a>
+				</div>
+			</div>
+		</div>
+
+		<!--翻纸牌效果  -->
+		<div class="col-1-of-3">
+			<div class="card" onclick="fanzhuan(2)" id="card2">
+				<div class="card__side card__side--front">
+					<a href="#"><img src="img/fanmian.jpg"></a>
+				</div>
+				<div class="card__side card__side--back">
+					<a href="#"><img src="img/zhengmian.jpg"></a>
+				</div>
+			</div>
+		</div>
+
+		<!--翻纸牌效果  -->
+		<div class="col-1-of-3">
+			<div class="card" onclick="fanzhuan(3)" id="card3">
+				<div class="card__side card__side--front">
+					<a href="#"><img src="img/fanmian.jpg"></a>
+				</div>
+				<div class="card__side card__side--back">
+					<a href="#"><img src="img/zhengmian.jpg"></a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!--反转JS-->
+	<script type="text/javascript">
+		function fanzhuan(num) {
+			$(".card").removeClass("fanzhuan");
+			$("#card" + num).addClass("fanzhuan");
+
+		}
+	</script>
+</body>
+
+</html>

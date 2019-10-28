@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>3D翻牌效果 </title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery.js"></script>
+    <style type="text/css">
+        .outer {
+            width: 600px;
+            height: 660px;
+            margin: 0 auto;
+        }
+
+        .outer div {
+            width: 600px;
+            height: 660px;
+            position: absolute;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: all 4s;
+        }
+
+        .div1 {
+            background: url("front.jpg") no-repeat;
+            transform: rotateY(0);
+        }
+
+        .div2 {
+            background: url("back.jpg") no-repeat;
+            transform: rotateY(-180deg);
+        }
+
+        .outer:hover .div1 {
+            transform: rotateY(-180deg);
+        }
+
+        .outer:hover .div2 {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+</body>
+
+</html>
